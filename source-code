@@ -1,0 +1,89 @@
+#include<iostream>
+#include<conio.h>//for _getche()
+#include<locale.h>//for setLocale
+using namespace std;
+
+int main()
+{
+	int a_sayac=0, e_sayac=0, i_sayac=0, ı_sayac=0, o_sayac=0, ö_sayac=0, u_sayac=0, ü_sayac=0;//defining counters
+	char n = 'a';
+	int asciiValue = 305;//ı characters ascii value
+	char character = char(asciiValue);//for defining ı characters ascii value to character variable
+	setlocale(LC_ALL, "Turkish");//for making program understand turkish characters
+
+	while (n != '\r')//creating loop till pressing enter button
+	{
+		n = _getwche();//reading characters one by one
+		if (n == 'a'|| n== 'A')//controls 'n' value if it is 'a' then incrementing a counter by one
+		{
+			a_sayac++;
+		}
+		else if (n == 'e' || n == 'E')//controls 'n' value if it is 'e' then incrementing a counter by one
+		{
+			e_sayac++;
+		}
+		else if (n == 'i' || n == 'İ')//controls 'n' value if it is 'i' then incrementing a counter by one
+		{
+			i_sayac++;
+		}
+		else if (n == char(asciiValue))//controls 'n' value if it is 'ı' then incrementing a counter by one
+		{
+			ı_sayac++;
+		}
+		else if (n == 'u' || n == 'U')//controls 'n' value if it is 'u' then incrementing a counter by one
+		{
+			u_sayac++;
+		}
+		else if (n == 'ü' || n == 'Ü')//controls 'n' value if it is 'ü' then incrementing a counter by one
+		{
+			ü_sayac++;
+		}
+		else if (n == 'ö' || n == 'Ö')//controls 'n' value if it is 'ö' then incrementing a counter by one
+		{
+			ö_sayac++;
+		}
+		else if (n == 'o' || n == 'O')//controls 'n' value if it is 'o' then incrementing a counter by one
+		{
+			o_sayac++;
+		}
+	} 
+	cout << endl;
+	cout << endl;
+	cout << "H    ";
+	cout << "TS   ";
+	cout << "1    " << "2    " << "3    " << "4    " << "5    " << "6    " << "7    " << "8    " << "9    " << "10    ";//for making table format
+	cout << endl;
+	cout << "a:    "<<a_sayac<<"   ";//printing amount from 'a' holder
+	for (int i = 0; i < a_sayac; i++)//print a amount of "*"
+		cout << "a    ";
+	cout << endl;
+	cout << "e:    " << e_sayac << "   ";//printing amount from 'e' holder
+	for (int i = 0; i < e_sayac; i++)//print e amount of "*"
+		cout << "e    ";
+	cout << endl;
+	cout << "i:    " << i_sayac << "   ";//printing amount from 'i' holder
+	for (int i = 0; i < i_sayac; i++)//print i amount of "*"
+		cout << "i    ";
+	cout << endl;
+	cout << "ı:    " << ı_sayac << "   ";//printing amount from 'ı' holder
+	for (int i = 0; i < ı_sayac; i++)//print ı amount of "*"
+		cout << "ı    ";
+	cout << endl;
+	cout << "o:    " << o_sayac << "   ";//printing amount from 'o' holder
+	for (int i = 0; i < o_sayac; i++)//print o amount of "*"
+		cout << "o    ";
+	cout << endl;
+	cout << "ö:    " << ö_sayac << "   ";//printing amount from 'ö' holder
+	for (int i = 0; i < ö_sayac; i++)//print ö amount of "*"
+		cout << "ö    ";
+	cout << endl;
+	cout << "u:    " << u_sayac << "   ";//printing amount from 'u' holder
+	for (int i = 0; i < u_sayac; i++)//print u amount of "*"
+		cout << "u    ";
+	cout << endl;
+	cout << "ü:    " << ü_sayac << "   ";//printing amount from 'ü' holder
+	for (int i = 0; i < ü_sayac; i++)//print ü amount of "*"
+		cout << "ü    ";
+	cout << endl;
+	system("pause");
+}
